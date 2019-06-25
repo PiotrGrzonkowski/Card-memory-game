@@ -18,8 +18,7 @@ class App extends Component {
     lvlNormal: [
       { sign: 'a', isVisible: false, isHidden: true }, { sign: 'b', isVisible: false, isHidden: true }, { sign: 'c', isVisible: false, isHidden: true }, { sign: 'd', isVisible: false, isHidden: true }, { sign: 'e', isVisible: false, isHidden: true }, { sign: 'f', isVisible: false, isHidden: true }, { sign: 'g', isVisible: false, isHidden: true }, { sign: 'h', isVisible: false, isHidden: true }, { sign: 'i', isVisible: false, isHidden: true }, { sign: 'j', isVisible: false, isHidden: true }, { sign: 'a', isVisible: false, isHidden: true }, { sign: 'b', isVisible: false, isHidden: true }, { sign: 'c', isVisible: false, isHidden: true }, { sign: 'd', isVisible: false, isHidden: true }, { sign: 'e', isVisible: false, isHidden: true }, { sign: 'f', isVisible: false, isHidden: true }, { sign: 'g', isVisible: false, isHidden: true }, { sign: 'h', isVisible: false, isHidden: true }, { sign: 'i', isVisible: false, isHidden: true }, { sign: 'j', isVisible: false, isHidden: true }
     ],
-    lvlNightmare: [],
-    lvlHell: [],
+
 
     cardValue: {
       firstCard: '',
@@ -28,10 +27,6 @@ class App extends Component {
       indexSecondCard: '',
 
     },
-    test: [
-      { sign: 'a', isVisible: false, isHidden: true }, { sign: 'b', isVisible: false, isHidden: true }, { sign: 'c', isVisible: false, isHidden: true }, { sign: 'd', isVisible: false, isHidden: true }, { sign: 'e', isVisible: false, isHidden: true }, { sign: 'f', isVisible: false, isHidden: true }, { sign: 'g', isVisible: false, isHidden: true }, { sign: 'h', isVisible: false, isHidden: true }, { sign: 'i', isVisible: false, isHidden: true }, { sign: 'j', isVisible: false, isHidden: true }, { sign: 'a', isVisible: false, isHidden: true }, { sign: 'b', isVisible: false, isHidden: true }, { sign: 'c', isVisible: false, isHidden: true }, { sign: 'd', isVisible: false, isHidden: true }, { sign: 'e', isVisible: false, isHidden: true }, { sign: 'f', isVisible: false, isHidden: true }, { sign: 'g', isVisible: false, isHidden: true }, { sign: 'h', isVisible: false, isHidden: true }, { sign: 'i', isVisible: false, isHidden: true }, { sign: 'j', isVisible: false, isHidden: true }],
-
-
 
   }
 
@@ -46,16 +41,13 @@ class App extends Component {
   }
 
   startGame = () => {
-    const currentStateDisplayStart = this.state.dispalyStartScrin;
-    const currentStateDispalyBoard = this.state.dispalyBoard;
-
-
+    const { dispalyStartScrin, dispalyBoard } = this.state;
+    const currentStateDisplayStart = dispalyStartScrin;
+    const currentStateDispalyBoard = dispalyBoard;
 
     this.setState({
       dispalyStartScrin: !currentStateDisplayStart,
-      dispalyBoard: !currentStateDispalyBoard,
-
-
+      dispalyBoard: !currentStateDispalyBoard
 
     })
   }
@@ -119,20 +111,25 @@ class App extends Component {
     }
 
   }
-  checkCard = (currentLvl) => {
-    console.log(currentLvl)
+  checkCard = () => {
+
 
     const { firstCard, secondCard, indexFirstCard, indexSecondCard } = this.state.cardValue
     if (firstCard !== secondCard && this.state.counter === 2) {
 
-      setTimeout(function () {
 
+      let hiddenCards = [...this.state.lvlNormal]
+
+
+      setTimeout(function () {
+        hiddenCards[indexFirstCard].isHidden = true;
+        hiddenCards[indexSecondCard].isHidden = true;
 
         this.setState({
           counter: 0,
-          lvlNormal: currentLvl,
+          lvlNormal: hiddenCards,
         })
-      }.bind(this), 1000)
+      }.bind(this), 2000)
     } if (firstCard === secondCard && this.state.counter === 2) {
 
       const lvl = [...this.state.lvlNormal];
@@ -148,14 +145,6 @@ class App extends Component {
 
     }
   }
-
-
-
-
-
-
-
-
 
   render() {
 

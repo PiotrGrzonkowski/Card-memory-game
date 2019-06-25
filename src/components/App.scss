@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+}
+
+$font-size: 5vh;
+$height: 8vh;
+$boardColor1: black;
+$boardColor2: white;
+
+
+
+.wrap {
+    background-color: #1d1c1c;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 800px;
+    min-height: 600px;
+
+
+}
+
+.ContainerStartScrin {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 30vh;
+    overflow: hidden;
+    transition: .5s;
+
+    div {
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: .3s linear;
+
+    }
+
+    .hidden {
+
+        height: 0;
+        overflow: hidden;
+    }
+
+
+    button {
+        color: white;
+        padding: 10px 50px;
+        background-color: #000;
+        border: 2px solid rgb(86, 0, 93);
+        height: $height;
+        margin: 5px 0;
+
+        &:hover {
+            background-color: rgb(120, 0, 131);
+            border: 2px solid #000;
+
+            &:nth-child(2) {
+                z-index: 2;
+            }
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+.board {
+    min-width: 350px;
+    max-width: 500px;
+    min-height: 50vh;
+    background-color: #1E50C8;
+    /* height: 50vh; */
+    display: flex;
+    flex-flow: row wrap;
+    flex-basis: 50vw;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+
+    div {
+        display: flex;
+        justify-content: center;
+        flex-basis: 17%;
+        min-height: 10vh;
+        font-size: $font-size;
+        background-color: rgb(44, 98, 121);
+        padding: 10px;
+        margin: 5px;
+        /* transform: rotateY(180deg); */
+        border-radius: 5px
+    }
+
+
+    div.hidden {
+        display: flex;
+        justify-content: center;
+        flex-basis: 17%;
+        min-height: 10vh;
+        font-size: $font-size * 0;
+        background-color: rgb(86, 0, 93);
+        padding: 10px;
+        margin: 5px;
+    }
+
+    .noVisible {
+        font-size: 0;
+        background-color: transparent;
+    }
+}

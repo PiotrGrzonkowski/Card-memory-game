@@ -9,7 +9,7 @@ const Board = (props) => {
     if (counter === 2) {
 
 
-        // props.checkCard()
+        props.checkCard()
     }
 
 
