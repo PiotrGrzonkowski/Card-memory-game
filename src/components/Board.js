@@ -2,9 +2,15 @@ import React from 'react';
 
 const Board = (props) => {
 
-    const { lvlNormal, isHidden, isVisible } = props.state
+    const { lvlNormal, counter, } = props.state
 
-    // console.log(lvlNormal)
+
+
+    if (counter === 2) {
+
+
+        // props.checkCard()
+    }
 
 
 
@@ -12,7 +18,7 @@ const Board = (props) => {
 
     const displayCards = lvlNormal.map((item, i) => <div className={` ${item.isHidden ? "hidden" : null} ${item.isVisible ? 'noVisible' : null}`}
         key={i} data-number={i}
-        onClick={() => props.checkCard(item, i)}>{item.sign}</div>)
+        onClick={() => props.pickCard(item, i)}>{item.sign}</div>)
 
 
 
