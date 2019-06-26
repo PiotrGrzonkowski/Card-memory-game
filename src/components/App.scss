@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
     font-family: arial;
+    text-transform: uppercase;
+    font-weight: 700;
+
 }
 
 $font-size: 5vh;
@@ -20,6 +23,7 @@ $boardColor2: white;
     align-items: center;
     min-width: 800px;
     min-height: 600px;
+
 
 
 }
@@ -51,14 +55,16 @@ $boardColor2: white;
     button {
         color: white;
         padding: 10px 50px;
-        background-color: #000;
-        border: 2px solid rgb(86, 0, 93);
+        background-color: #9d9c9c;
+        border: 2px solid rgb(61, 146, 128);
         height: $height;
         margin: 5px 0;
+        border-radius: 5px;
+
 
         &:hover {
-            background-color: rgb(120, 0, 131);
-            border: 2px solid #000;
+            background-color: rgb(61, 146, 128);
+            border: 2px solid #9d9c9c;
 
             &:nth-child(2) {
                 z-index: 2;
@@ -77,14 +83,10 @@ $boardColor2: white;
 
 
 .board {
-    min-width: 350px;
-    max-width: 500px;
-    min-height: 50vh;
-    background-color: #1E50C8;
-    /* height: 50vh; */
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-flow: row wrap;
-    flex-basis: 50vw;
     justify-content: space-between;
     align-items: center;
     border-radius: 20px;
@@ -92,13 +94,14 @@ $boardColor2: white;
     div {
         display: flex;
         justify-content: center;
+        align-items: center;
         flex-basis: 17%;
-        min-height: 10vh;
+        height: 80px;
+        height: 20%;
         font-size: $font-size;
         background-color: rgb(44, 98, 121);
         padding: 10px;
         margin: 5px;
-        /* transform: rotateY(180deg); */
         border-radius: 5px
     }
 
@@ -107,9 +110,13 @@ $boardColor2: white;
         display: flex;
         justify-content: center;
         flex-basis: 17%;
-        min-height: 10vh;
+        min-height: 80px;
         font-size: $font-size * 0;
-        background-color: rgb(86, 0, 93);
+        background-image: url("./picture/znak zapytania.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-origin: content-box;
         padding: 10px;
         margin: 5px;
     }
@@ -117,5 +124,8 @@ $boardColor2: white;
     .noVisible {
         font-size: 0;
         background-color: transparent;
+        height: 1px;
+        padding: 0 10px;
+        margin: 0 5px;
     }
 }
