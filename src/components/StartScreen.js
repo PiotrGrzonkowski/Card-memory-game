@@ -4,8 +4,6 @@ import React from 'react';
 const StartScrin = (props) => {
 
 
-
-
     return (
         <div className="ContainerStartScrin">
             <button onClick={() => props.startGame()}>start game</button>
@@ -16,9 +14,6 @@ const StartScrin = (props) => {
                 <button id="Nightmare" onClick={() => props.lvlGame("Nightmare")}>Nightmare</button>
                 <button id="Hell" onClick={() => props.lvlGame("Hell")}>Hell</button>
             </div>
-
-            <button>how to play</button>
-
 
         </div>
     );

@@ -75,13 +75,6 @@ $boardColor2: white;
 }
 
 
-
-
-
-
-
-
-
 .board {
     width: 100vw;
     height: 100vh;
@@ -97,12 +90,13 @@ $boardColor2: white;
         align-items: center;
         flex-basis: 17%;
         height: 80px;
-        height: 20%;
         font-size: $font-size;
         background-color: rgb(44, 98, 121);
         padding: 10px;
         margin: 5px;
-        border-radius: 5px
+        border-radius: 5px;
+
+
     }
 
 
@@ -110,7 +104,7 @@ $boardColor2: white;
         display: flex;
         justify-content: center;
         flex-basis: 17%;
-        min-height: 80px;
+        height: 80px;
         font-size: $font-size * 0;
         background-image: url("./picture/znak zapytania.png");
         background-size: contain;
@@ -127,5 +121,28 @@ $boardColor2: white;
         height: 1px;
         padding: 0 10px;
         margin: 0 5px;
+    }
+
+
+}
+
+.scoreScrin {
+    background-color: #9d9c9c;
+    border: 2px solid rgb(61, 146, 128);
+    border-radius: 5px;
+    padding: 40px 35px 40px 40px;
+
+
+
+
+    button {
+
+        color: white;
+        padding: 10px 50px;
+        background-color: #9d9c9c;
+        border: 2px solid rgb(61, 146, 128);
+        height: $height;
+        margin: 10px 0;
+        border-radius: 5px;
     }
 }
