@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Card-memory-game/static/css/main.27c49b09.chunk.css",
+    "main.js": "/Card-memory-game/static/js/main.8fbae7c8.chunk.js",
+    "main.js.map": "/Card-memory-game/static/js/main.8fbae7c8.chunk.js.map",
+    "runtime~main.js": "/Card-memory-game/static/js/runtime~main.1f11cd08.js",
+    "runtime~main.js.map": "/Card-memory-game/static/js/runtime~main.1f11cd08.js.map",
+    "static/js/2.f87c6b8b.chunk.js": "/Card-memory-game/static/js/2.f87c6b8b.chunk.js",
+    "static/js/2.f87c6b8b.chunk.js.map": "/Card-memory-game/static/js/2.f87c6b8b.chunk.js.map",
+    "index.html": "/Card-memory-game/index.html",
+    "precache-manifest.8f13e523366ef8f04e3016e395acc98e.js": "/Card-memory-game/precache-manifest.8f13e523366ef8f04e3016e395acc98e.js",
+    "service-worker.js": "/Card-memory-game/service-worker.js",
+    "static/css/main.27c49b09.chunk.css.map": "/Card-memory-game/static/css/main.27c49b09.chunk.css.map",
+    "static/media/App.css": "/Card-memory-game/static/media/znak zapytania.d031acc2.png"
+  }
+}
